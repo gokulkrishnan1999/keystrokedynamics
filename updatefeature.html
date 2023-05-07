@@ -1,0 +1,282 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<a href="/">Home</a>
+	<a href="/login">Login</a>
+	<a href="/register">Register</a>
+
+ -->
+
+
+ <!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Key Stroke Authentication| Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Lyceum a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="/static/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="all" />
+<link href="/static/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
+<link href="/static/css/smoothbox.css" rel='stylesheet' type='text/css'/>
+<link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(document).contextmenu(function() {
+      return false;
+  });
+});
+</script>
+</head>
+<body>
+
+<!-- Header -->
+<section class="header" >
+<div class="banner" style="min-height:20px !important;">
+<div class="w3_banner" style="min-height:20px !important;">
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+							<h1>Key Stroke </h1><label>Authentication</label>
+						</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/">Home </a>
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link scroll" href="#about">About</a> -->
+      </li>
+	 <!--  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="nav-link scroll" href="#services">SERVICES</a>
+		<a class="nav-link scroll" href="#team">TEAM</a>
+		<a class="nav-link scroll" href="#gallery">GALLERY</a>
+        </div>
+      </li> -->
+      
+	  
+
+	<li class="nav-item ">
+        <a class="nav-link" href="updatefeature">Update Feature </a>
+      </li>
+       <li class="nav-item ">
+        <a class="nav-link" href="/login">Logout </a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" required="" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form> -->
+  </div>
+</nav>
+<div class="agileits_w3layouts_banner_info">
+				
+			</div>
+</div>
+</div>
+</div>
+</section>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+
+    {% for message in messages %}
+    <script>alert("{{ message }}")</script>
+    {% endfor %}
+
+    {% endif %}
+    {% endwith %} 
+
+<div class="w3ls-section contact" id="contact">
+		<div class="container">
+			<div class="w3-heading-all contact-head">
+		
+		<span  class="w3-heading-icon">
+		</span>
+		</div>
+			<div class="contact-form">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-5 contact-left">
+					<div class="address">
+						<h5><b>UPDATE FEATURE </b></h5><br><br><br>
+						
+					</div>
+				</div>
+<!-- <h1 align="center">Register</h1> -->
+
+<form method="post" id="register_via_keystroke">
+	<center>
+<table style="width:500px;color: #000" class="table">
+	
+	
+	<tr align="center">
+		<td colspan="2"><font color="#fff">Please repeat the below paragraph</td>
+	</tr>
+	<tr align="center">
+		<td colspan="2" ><textarea style="width:500px; height:100px" required readonly="" name="check">Hunt and peck (two-fingered typing), also known as Eagle Finger</textarea></td>
+
+	</tr>
+	<tr align="center">
+		<td colspan="2" align="center">
+			<textarea style="width:500px; height:100px" name="feature_text" ></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<input type="button" name="register" class="btn btn-primary" value="Register">
+		</td>
+	</tr>
+</table></center>
+</form>
+
+	</div>
+			</div>
+		</div>
+		
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script>
+
+		$(document).ready(function(){
+
+			key_timing = []
+
+			enable = true
+
+			$("#register_via_keystroke input[type='button']").click(function(){
+				features = []
+					
+				if (key_timing.length > 1){
+					feature = []
+					j = 0
+					alert(key_timing.length)
+					for(i=0;i<key_timing.length-1;i++){
+						// feature.push(key_timing[i][0])
+						// feature.push(key_timing[i+1][0])
+						feature.push(key_timing[i][1]-key_timing[i][0])
+						feature.push(key_timing[i+1][1]-key_timing[i+1][0])
+						feature.push(key_timing[i+1][0]-key_timing[i][0])
+						feature.push(key_timing[i+1][1]-key_timing[i][1])
+						feature.push(key_timing[i+1][1]-key_timing[i][0])
+						feature.push(key_timing[i+1][0]-key_timing[i][1])
+						j++;
+						if(j==1){
+
+							console.log(feature)
+							features.push(feature)
+
+							feature = []
+							j = 0
+						}
+					}
+					
+				}
+				obj = $('#register_via_keystroke').serializeArray()
+				obj.push({name:$(this).attr('name'),value:$(this).val()})
+				obj.push({name:'features',value:JSON.stringify(features)})
+				obj.push({name:'length',value:JSON.stringify(key_timing.length)})
+				$.post('/update_features/',obj,function(data){
+					window.location = '/user_home'
+				})
+				key_timing = []
+				features = []
+			})
+
+			key_info = []
+
+			$("#register_via_keystroke textarea[name='feature_text']").keydown(function(e){
+				
+				if (key_info.length == 0){
+					key_info.push(Date.now())
+				}
+			});	
+			$("#register_via_keystroke textarea[name='feature_text']").keyup(function(e){
+				if (key_info.length == 1){
+					key_info.push(Date.now())
+					key_timing.push(key_info)
+					key_info = []
+				}
+				
+				
+			});
+
+
+		})
+
+
+	</script>
+
+
+
+	<script src="
+https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+<script>
+    $(function() {
+        $("input[name='fname']").on('input', function(e) {
+            $(this).val($(this).val().replace(/[^A-Za-z ]/g, ''));
+
+        });
+        $("input[name='lname']").on('input', function(e) {
+            $(this).val($(this).val().replace(/[^A-Za-z ]/g, ''));
+
+        });
+        $("input[name='age']").on('input', function(e) {
+            $(this).val($(this).val().replace(/[^0-9/]/g, ''));
+
+        });
+        
+        $("input[name='phone']").on('input', function(e) {
+        	$(this).val($(this).val().replace(/[^0-9]/g, ''));
+            
+        });
+        
+        $("input[name='email']").on('input', function(e) {
+              var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{1,}/.test(this.value);
+                if(!re) {
+                    $('#eerror').show();
+                } else {
+                    $('#eerror').hide();
+                }
+
+        });
+        
+        $("input[name='user']").on('input', function(e) {
+        	$(this).val($(this).val().replace(/[^0-9A-Za-z@/. ]/g, ''));
+            
+        });    
+        $("input[name='pwd']").on('input', function(e) {
+        	$(this).val($(this).val().replace(/[^0-9A-Za-z@/. ]/g, ''));
+            
+        });
+    });
+</script>
+
+{% include 'publicfooter.html' %}

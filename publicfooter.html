@@ -1,0 +1,159 @@
+
+<div class="footer-w3layouts">
+<div class="w3_agileits_social_media">
+					<ul>
+						
+						<li><a href="#" class="wthree_facebook"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="#" class="wthree_twitter"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#" class="wthree_dribbble"><i class="fab fa-dribbble"></i></a></li>
+						<li><a href="#" class="wthree_rss"><i class="fas fa-rss"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="container">
+				<div class="agile-copy">
+					<p>© 2022 Key Stroke Authentication All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+           </section>
+
+	
+<script src="/static/js/jquery-2.2.3.min.js"></script>
+<script  src="/static/js/jquery.js"></script>
+<script  src="/static/js/bootstrap.min.js"></script>
+<script  src="/static/js/move-top.js"></script>
+<script  src="/static/js/easing.js"></script>
+<script  src="/static/js/SmoothScroll.min.js"></script>	
+<script  src="/static/js/smoothbox.min.js"></script>
+
+<!-- flexSlider -->
+				<script defer src="/static/js/jquery.flexslider.js"></script>
+				<script type="text/javascript">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				</script>
+<!-- //flexSlider -->
+
+
+<!-- tabs -->
+
+<script src="/static/js/easy-responsive-tabs.js"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!--//tabs-->
+
+	<script type="text/javascript">
+	$(window).load(function() {
+	$("#flexiselDemo1").flexisel({
+		visibleItems:1,
+		animationSpeed: 1000,
+		autoPlay:false,
+		autoPlaySpeed: 3000,    		
+		pauseOnHover: true,
+		enableResponsiveBreakpoints: true,
+		responsiveBreakpoints: { 
+			portrait: { 
+				changePoint:480,
+				visibleItems: 1
+			}, 
+			landscape: { 
+				changePoint:640,
+				visibleItems:1
+			},
+			tablet: { 
+				changePoint:768,
+				visibleItems: 1
+			}
+		}
+	});
+
+	});
+	</script>
+	<script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>
+	
+<!-- for-Map -->
+		<script type="text/javascript">
+			$(function() {
+			
+				var menu_ul = $('.faq > li > ul'),
+					   menu_a  = $('.faq > li > a');
+				
+				menu_ul.hide();
+			
+				menu_a.click(function(e) {
+					e.preventDefault();
+					if(!$(this).hasClass('active')) {
+						menu_a.removeClass('active');
+						menu_ul.filter(':visible').slideUp('normal');
+						$(this).addClass('active').next().stop(true,true).slideDown('normal');
+					} else {
+						$(this).removeClass('active');
+						$(this).next().stop(true,true).slideUp('normal');
+					}
+				});
+			
+			});
+		</script>
+<!-- //for-Map -->
+
+<!-- start-smoth-scrolling -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+<!-- scrolling script -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script> 
+<!-- //scrolling script -->
+<!--//start-smoth-scrolling -->
+
+
+</body>
+</html>

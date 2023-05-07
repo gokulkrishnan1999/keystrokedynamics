@@ -1,6 +1,4 @@
 {% include 'publicheader.html' %}
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
     @import url(https://fonts.googleapis.com/css?family=Audiowide);
 
@@ -85,7 +83,7 @@
       position: absolute;
       right: 0;
       top: 0;
-      width: 450px;
+      width: 600px;
     }
 
     form:after {
@@ -100,7 +98,7 @@
     }
 
     form:before {
-      border-radius: 50%;
+      border-radius: 70%;
       box-shadow: 0 0 6px 4px #fff;
       content: "";
       display: block;
@@ -161,7 +159,7 @@
 
     }
 
-    input[type=text], input[type=password], input[type=number] {
+    input[type=text], input[type=password], input[type=number] , input[type=email], input[type=phone]{
       background: linear-gradient(#1f2124,#27292c);
       border: 1px solid #222;
       border-radius: .3em;
@@ -238,8 +236,7 @@
     label:hover ~ input[type=text],
     label:hover ~ input[type=password],
     label:hover ~ input[type=number],
-    label:hover ~ input[type=radio],
-    {
+    label:hover ~ input[type=radio], {
       background: #27292c;
     }
 
@@ -250,7 +247,7 @@
       cursor: pointer;
       z-index: 1;
       height: 100%;
-      width: 100%;
+      width: 80%;
       left: 0;
       top: 0;
     }
@@ -413,135 +410,129 @@
       }
     }
     </style>
-	<body>
-<form  method="post" id="login_via_keystroke">
-	<h1 id="litheader">LOGIN</h1>
-<table>
-	<tr>
-		<td>Username</td>
-		<td><input placeholder="Enter your username" type="text" maxlength="20" name="username"></td>
-	</tr>
+<body>
 
+<form method="post" id="register_via_keystroke">
+	<h1 id="litheader">REGISTER</h1>
+<table style="width:500px" align="center" >
+	<tr align="center">
+		<td>First Name</td>
+		<td><input type="text" placeholder="Enter your first name" name="fname" maxlength="20" required></td>
+	</tr>
+	<tr align="center">
+		<td>Last Name</td>
+		<td><input type="text" placeholder="Enter your last name" name="lname" maxlength="20" required></td>
+	</tr>
+	<tr align="center">
+		<td>Age</td>
+		<td><input type="number" placeholder="choose your age" name="age" min="10" max="99" required></select></td>
+	</tr>
+	<tr align="center">
+		<td>Phone</td>
+		<td><input type="phone" placeholder="Enter phone number" name="phone" maxlength="10" required></td>
+	</tr>
+	<tr align="center">
+		<td>Email</td>
+		<td><input type="email"  placeholder="Enter your email id" name="email" maxlength="30" required></td>
+	</tr>
+	<tr align="center">
+		<td>Username</td>
+		<td><input type="text" placeholder="Enter a valid username" name="user" maxlength="20" required></td>
+	</tr>
 	<tr align="center">
 		<td colspan="2">Please repeat the below paragraph</td>
 	</tr>
 	<tr align="center">
-		<td colspan="2" ><textarea style="width:500px; height:100px">Hunt and peck (two-fingered typing), also known as Eagle Finger</textarea></td>
+		<td colspan="2" ><textarea style="width:500px; height:60px" >Hunt and peck (two-fingered typing), also known as Eagle Finger</textarea></td>
 
 	</tr>
 	<tr align="center">
 		<td colspan="2">
-			<textarea placeholder="Enter here" style="width:500px; height:100px" name="feature_text"  class="form-control"></textarea>
+			<textarea placeholder="Enter here" required style="width:500px; height:60px" name="feature_text"  class="form-control"></textarea>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2">
-		<input type="button"  name="login" class="btn btn-primary" value="Login">
+			<input type="button" name="register" class="btn btn-primary" value="Register">
 		</td>
 	</tr>
 </table>
 </form>
 </body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script>
-
 
 		$(document).ready(function(){
 
 			key_timing = []
 
 			enable = true
-			alert("Login here with registered credentials !!")
-			$("#login_via_keystroke input[type='button']").click(function(){
+
+			$("#register_via_keystroke input[type='button']").click(function(){
+				alert("Registered..!!")
 				features = []
-					
-				if (key_timing.length > 1){
+				console.log(key_timing.length)
+				if (key_timing.length > 2){
 					feature = []
 					j = 0
-          var l=key_timing.length;
-          var para1="you cannot login to the system";
-          var para2="you can login to the system";
-          var message = para1 + " " + l;
-          var message1 = para2 + " " + l;
-
-					// alert(key_timing.length)
-          if(key_timing.length < 70)
-          {
-            alert(message);
-          }
-          else{
-            alert(message1);
-            if(confirm){
-            window.location.href = "/home";
-            }
-          }
 					for(i=0;i<key_timing.length-1;i++){
 						// feature.push(key_timing[i][0])
 						// feature.push(key_timing[i+1][0])
+
 						feature.push(key_timing[i][1]-key_timing[i][0])
 						feature.push(key_timing[i+1][1]-key_timing[i+1][0])
 						feature.push(key_timing[i+1][0]-key_timing[i][0])
 						feature.push(key_timing[i+1][1]-key_timing[i][1])
 						feature.push(key_timing[i+1][1]-key_timing[i][0])
 						feature.push(key_timing[i+1][0]-key_timing[i][1])
-						j++;
-						if(j==1){
 
-							console.log(feature)
+
+						j++;
+						//console.log(feature)
+						if(j==1){
+					
 							features.push(feature)
+							
 
 							feature = []
 							j = 0
 						}
 					}
-					
-				}
-				// console.log(features)
-				obj = $('#login_via_keystroke').serializeArray()
-				console.log(JSON.stringify(features))
+					console.log(features)
+			  }
+
+				obj = $('#register_via_keystroke').serializeArray()
 				obj.push({name:$(this).attr('name'),value:$(this).val()})
 				obj.push({name:'features',value:JSON.stringify(features)})
-				$.post('/login_action/',obj,function(data){
-					// console.log(data);
-					obj = JSON.parse(data)
-					if(obj['status'] == 'success'){
-						if(obj['data'].length > 0){
-
-								//  alert("ok")
-							}else
-          {
-						alert(obj['reason'])
-					}
-						}
-					}
-          
-				);
+				$.post('/register_action/',obj,function(data){
+					window.location = '/register'
+				})
 				key_timing = []
 				features = []
 			})
 
 			key_info = []
 
-			$("#login_via_keystroke textarea[name='feature_text']").keydown(function(e){
-				// console.log(key_info.length)
+			$("#register_via_keystroke textarea[name='feature_text']").keydown(function(e){
 				if (key_info.length == 0){
 					key_info.push(Date.now())
+				}else{
+					e.preventDefault()
 				}
 			});	
-			$("#login_via_keystroke textarea[name='feature_text']").keyup(function(e){
-				// console.log(key_info.length)
+			$("#register_via_keystroke textarea[name='feature_text']").keyup(function(e){
 				if (key_info.length == 1){
 					key_info.push(Date.now())
 					key_timing.push(key_info)
 					key_info = []
 				}
+				
+				
 			});
 
 
 		})
 
 	</script>
-
 {% include 'footer.html' %}
